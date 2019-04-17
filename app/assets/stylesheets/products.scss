@@ -51,6 +51,30 @@ main section.categories-show {
         font-size: 0.8em;
       }
 
+      aside.badge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        background-color: rgba(236, 19, 19, 0.315);
+        border-radius:5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 85%;
+        // border-top-left-radius: 5px;
+        // border-bottom-left-radius: 4px;
+        font-size: 0.8em;
+        p {
+          transform: rotate(-20deg);
+          padding-top: 5px;
+          float: left;
+          color: black;
+          font-weight: bold;
+        }
+      }
+
       &:hover {
 
         border-color: #999;
