@@ -8,10 +8,10 @@ class UsersController < ApplicationController
     @user.email.downcase!
 
     if @user.save
-      flash[:notice] = "Account created successfully!"
       redirect_to root_path
+      user = User.find_by(email: @user.email)
+      session[:user_id] = user.id.to_s
     else
-      flash.now.alert = "Oops, couldn't create account. Please make sure you are using a valid email and password and try again."
       render :new
     end
   end
